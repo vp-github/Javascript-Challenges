@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  height: 100vh;
+  background: linear-gradient(-10deg, rgb(123, 223, 161), rgb(199, 175, 111));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub-container {
+  display: flex;
+  flex-direction: column;
+  height: 25%;
+}
+.heading {
+  color: tomato;
+  font-size: 62px;
+  margin-bottom: 25px;
+}
+.text {
+  font-size: 35px;
+  margin-bottom: 25px;
+}
+.input-box {
+  font-size: 35px;
+  width: 450px;
+}
+#check-btn {
+  width: 50px;
+  height: 45px;
+  background: rgb(36, 19, 36);
+  color: whitesmoke;
+}
+.input-wrapper {
+  display: flex;
+}
