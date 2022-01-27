@@ -1,5 +1,5 @@
 "use strict";
-const parent = document.querySelector(".sub-container");
+const parent = document.querySelector(".result-div");
 const hobbies = {
   steve: ["Fashion", "Piano", "Reading"],
   Patty: ["Dancing", "Magic", "Pets"],
@@ -10,10 +10,17 @@ function reset() {
   document.getElementById("input-id").value = "";
   location.reload();
 }
+
 document.querySelector("#input-id").addEventListener("keyup", (event) => {
-  if (event.key === "Enter") getResults();
-  event.preventDefault();
+  if (event.key === "Enter") {
+    document.getElementById("input-id").value === ""
+      ? alert("Sentence Cannot be Empty")
+      : parent.innerHTML.length == 0
+      ? getResults()
+      : (parent.innerHTML = "");
+  }
 });
+
 function getResults() {
   const userInput = document.querySelector("#input-id").value;
   const answer = getKeyByValue(hobbies, userInput);
@@ -30,6 +37,7 @@ function getResults() {
     </div>
       `);
   parent.appendChild(result);
+  answer.length = 0;
 }
 function getKeyByValue(object, value) {
   const keyList = Object.keys(object);
