@@ -9,6 +9,7 @@ function getResults() {
 }
 function reset() {
   document.getElementById("input-id").value = "";
+  location.reload();
 }
 function checkResults(sent) {
   let textArray = [

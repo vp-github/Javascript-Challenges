@@ -6,7 +6,7 @@
 
 .main-container {
   height: 100vh;
-  background: linear-gradient(-10deg, rgb(123, 223, 161), rgb(199, 175, 111));
+  background: linear-gradient(-60deg, rgb(0, 255, 128), rgb(255, 187, 0));
   display: flex;
   justify-content: center;
   align-items: center;

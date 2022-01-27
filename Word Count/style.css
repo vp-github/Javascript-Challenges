@@ -12,8 +12,8 @@ body {
 }
 .sub-container {
   background: hsl(0, 0%, 0%, 0.5);
-  width: 600px;
-  height: 800px;
+  width: 90%;
+  height: 80%;
   margin: auto;
   margin-top: 100px;
   display: flex;
@@ -41,14 +41,14 @@ table {
   padding: 10px;
   font-size: 35px;
   border: 1px solid rgb(236, 229, 229);
-  width: 500px;
+  width: 60%;
   margin-top: 25px;
 }
 tr {
   padding: 10px;
   font-size: 35px;
   border: 1px solid rgb(236, 229, 229);
-  width: 500px;
+  width: 60%;
 }
 td {
   text-align: center;

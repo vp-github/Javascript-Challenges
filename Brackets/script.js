@@ -1,4 +1,9 @@
 "use strict";
+document.querySelector("#input-id").addEventListener("keyup", (event) => {
+  if (event.key !== "Enter") return;
+  document.querySelector("#check-btn").click();
+  event.preventDefault();
+});
 function getResults() {
   const statement = document.getElementById("input-id").value;
   statement === ""
