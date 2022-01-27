@@ -20,6 +20,7 @@ body {
   flex-direction: column;
   align-items: center;
   color: rgb(255, 255, 255);
+  justify-content: center;
 }
 h1 {
   font-size: 72px;
@@ -36,6 +37,12 @@ label {
   height: 50px;
   font-size: 30px;
   padding: 5px;
+}
+.table-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
 }
 table {
   padding: 10px;
