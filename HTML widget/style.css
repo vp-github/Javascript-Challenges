@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  height: 100vh;
+  background: rgba(255, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sub-container {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  margin-bottom: 50px;
+  font-size: 60px;
+}
+.stars {
+  font-size: 70px;
+  margin-bottom: 25px;
+}
+.rated {
+  font-size: 70px;
+  margin-bottom: 25px;
+  color: rgb(255, 251, 0);
+}
