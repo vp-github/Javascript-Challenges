@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  background: hsl(0, 0%, 0%, 0.9);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sub-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+  background: rgb(27, 156, 81);
+}
+.mini-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+  height: 80%;
+  background: rgb(100, 237, 146);
+}
+header {
+  display: flex;
+  align-items: flex-start;
+  height: 35%;
+  width: 100%;
+}
+header h1 {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1%;
+  font-size: 55px;
+}
+.clipart {
+  height: 120%;
+  width: 350px;
+}
+.contents {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+  margin-top: 1%;
+  height: 350px;
+}
+
+.input-wrapper label {
+  font-size: 32px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+.input-wrapper select,
+.input-wrapper input {
+  font-size: 24px;
+  margin-top: 10px;
+  padding: 5px;
+  width: 250px;
+}
+.date-wrapper label {
+  margin-right: 25px;
+}
+.start-wrapper {
+  margin-bottom: 25px;
+}
+.end-wrapper {
+  margin-bottom: 25px;
+}
+.end-wrapper label {
+  margin-right: 42px;
+}
+.result-div {
+  margin-left: 20px;
+  margin-right: 60px;
+  margin-bottom: 55px;
+  padding: 15px;
+  display: flex;
+  width: 60%;
+  height: 70%;
+  font-size: 40px;
+}
+.result-class {
+  background: rgb(255, 238, 0, 0.8);
+}
+.button-div {
+  display: flex;
+  margin-top: 75px;
+  justify-content: center;
+}
+.btn {
+  background: transparent;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 28px;
+  padding: 10px;
+}
+.go-btn {
+  margin-right: 150px;
+}

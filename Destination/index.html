@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Destination</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="sub-container">
+        <div class="mini-container">
+          <header>
+            <img src="image.png" alt="travel" class="clipart" />
+            <h1>How Long Will it Take?! Let's Find Out</h1>
+          </header>
+          <div class="contents">
+            <div class="input-wrapper">
+              <div class="start-wrapper">
+                <label>Starting From: </label>
+                <select class="start" name="Start Location">
+                  <option value="" disabled selected>Select your option</option>
+                </select>
+              </div>
+              <div class="end-wrapper">
+                <label>Destined To: </label>
+                <select class="end" name="Destination">
+                  <option value="" disabled selected>Select your option</option>
+                </select>
+              </div>
+              <div class="date-wrapper">
+                <label>Going When? </label>
+                <input type="date" class="date" />
+              </div>
+              <div class="button-div">
+                <button class="go-btn btn" type="submit">Go</button>
+                <button class="reset btn" type="reset" onclick="reset();">
+                  Reset
+                </button>
+              </div>
+            </div>
+
+            <div class="result-div"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
