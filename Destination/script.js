@@ -32,7 +32,6 @@ let tempRouteArr = [],
   tempDistArr = [],
   routeArr = [],
   distArr = [],
-  count = 0,
   newDate;
 places.forEach((item) => {
   startInput.innerHTML += `<option value="${item}">${item}</option>`;
@@ -41,11 +40,8 @@ places.forEach((item) => {
 document.querySelector(".go-btn").addEventListener("click", () => {
   const startValue = startInput.value;
   const endValue = endInput.value;
-  if (startValue == "" || endValue == "") {
-    alert("Please Check Your Inputs!");
-  } else {
-    getResults(startValue, endValue);
-  }
+  if (startValue == "" || endValue == "") alert("Please Check Your Inputs!");
+  else getResults(startValue, endValue);
 });
 function getResults(startValue, endValue) {
   checkRoute(startValue, endValue);
@@ -57,7 +53,6 @@ function reset() {
 }
 function checkRoute(startValue, endValue) {
   if (startValue === endValue) {
-    count = 0;
     tempRouteArr.push(`${startValue}`);
     routeArr.push([...tempRouteArr.reverse()]);
     distArr.push(tempDistArr.reduce((a, b) => a + b, 0));
@@ -69,7 +64,6 @@ function checkRoute(startValue, endValue) {
     if (endValue === data[i].end) {
       tempRouteArr.push(`${data[i].end}`);
       tempDistArr.push(data[i].days);
-      count = i;
       checkRoute(startValue, data[i].start);
     }
     if (data[i].start !== startValue) {
