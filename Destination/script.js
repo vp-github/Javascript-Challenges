@@ -12,7 +12,6 @@ const data = [
   { start: "Chennai", end: "Mumbai", days: 5 },
   { start: "Coimbatore", end: "Bangalore", days: 3 },
 ];
-
 const places = [
   "Tirunelveli",
   "Chennai",
@@ -35,45 +34,49 @@ let tempRouteArr = [],
   distArr = [],
   count = 0,
   newDate;
-
 places.forEach((item) => {
   startInput.innerHTML += `<option value="${item}">${item}</option>`;
   endInput.innerHTML += `<option value="${item}">${item}</option>`;
 });
-
 document.querySelector(".go-btn").addEventListener("click", () => {
   const startValue = startInput.value;
   const endValue = endInput.value;
-  getResults(startValue, endValue);
+  if (startValue == "" || endValue == "") {
+    alert("Please Check Your Inputs!");
+  } else {
+    getResults(startValue, endValue);
+  }
 });
-
 function getResults(startValue, endValue) {
   checkRoute(startValue, endValue);
   optimizeRoute(routeArr, distArr, endValue);
   displayResults(routeArr, distArr);
-  console.log(routeArr);
-  console.log(distArr);
 }
 function reset() {
   location.reload();
 }
 function checkRoute(startValue, endValue) {
   if (startValue === endValue) {
+    count = 0;
     tempRouteArr.push(`${startValue}`);
     routeArr.push([...tempRouteArr.reverse()]);
     distArr.push(tempDistArr.reduce((a, b) => a + b, 0));
     tempRouteArr.length = 0;
     tempDistArr.length = 0;
-    count = 0;
     return;
   }
-
   for (let i = 0; i < data.length; i++) {
     if (endValue === data[i].end) {
-      console.log(data[i].end + "<-" + data[i].start);
       tempRouteArr.push(`${data[i].end}`);
       tempDistArr.push(data[i].days);
+      count = i;
       checkRoute(startValue, data[i].start);
+    }
+    if (data[i].start !== startValue) {
+      if (i === 10) {
+        tempRouteArr.pop();
+        tempDistArr.pop();
+      }
     }
   }
 }
@@ -89,7 +92,7 @@ function optimizeRoute(routeArr, distArr, endValue) {
           distArr[i] = distArr[i] + item.days;
         }
       });
-    } //else console.log(routeArr);
+    }
   }
 }
 function displayResults(routeArr, distArr) {
@@ -111,7 +114,6 @@ function displayResults(routeArr, distArr) {
     result.innerHTML += ` <br><br> That is going to take ${min} days. So, Will reach there by ${formattedDate}`;
     result.classList.add("result-class");
   }
-
   function dateCalculation(num) {
     let dateValue = new Date(dateInput.value);
     let dayValue = dateValue.getDay() + 1;

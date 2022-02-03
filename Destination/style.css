@@ -86,7 +86,7 @@ header h1 {
   font-size: 35px;
 }
 .result-class {
-  background: rgb(255, 238, 0, 0.8);
+  background: rgba(0, 255, 213, 0.8);
 }
 .button-div {
   display: flex;
